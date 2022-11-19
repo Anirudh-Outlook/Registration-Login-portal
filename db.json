@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "blogs": [
+    {
+      "fn": "Anirudh",
+      "ln": "Chaturvedula",
+      "c": "9",
+      "dob": "1998-10-10",
+      "phone": "9999999999",
+      "gen": "male",
+      "cou": "INDIA",
+      "email": "aniii@bhuu.co",
+      "password": "aaaab",
+      "id": 1
+    },
+    {
+      "fn": "FirstName",
+      "ln": "",
+      "c": "11",
+      "dob": "1912-11-11",
+      "phone": "9999999999",
+      "gen": "male",
+      "cou": "INDIA",
+      "email": "first@name.com",
+      "password": "first.name",
+      "id": 2
+    },
+    {
+      "fn": "tester",
+      "ln": "one",
+      "c": "1",
+      "dob": "1900-01-01",
+      "phone": "",
+      "gen": "male",
+      "cou": "Cuba",
+      "email": "test@1.yo",
+      "password": "tester1",
+      "id": 3
+    },
+    {
+      "fn": "Developer",
+      "ln": "",
+      "c": "12",
+      "dob": "2012-07-07",
+      "phone": "",
+      "gen": "female",
+      "cou": "Zambia",
+      "email": "dev@1.yo",
+      "password": "DevOne",
+      "id": 4
+    },
+    {
+      "fn": "Raja",
+      "ln": "yes",
+      "c": "2",
+      "dob": "1992-12-19",
+      "phone": "9999999999",
+      "gen": "female",
+      "cou": "Bermuda",
+      "email": "ab@ha.x",
+      "password": "aaaaa",
+      "id": 5
+    }
+  ]
+}
