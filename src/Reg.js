@@ -23,7 +23,7 @@ useEffect(()=>{fetch(`http://localhost:8002/blogs/`).then(res=>res.json()).then(
 
 
  const history=useHistory();
-//const [p,setP]=useState(location.state.p.password); 
+
 const [pp,setPp]=useState(''); 
 const [k,setK]=useState(false)
 
@@ -31,12 +31,11 @@ const emailHandler=e=>{{ setIsSubmit(false);
   if (e.target.value<0){    e.preventDefault();    }   
   else setDet({...det,[e.target.name]:e.target.value.toLowerCase()});}}  
 
-
 const typeHandle=e=>{{ setIsSubmit(false);
   if (e.target.value<0){    e.preventDefault();    }   
   else setDet({...det,[e.target.name]:e.target.value});}}  
 
-  const phoneHandle=e=>
+const phoneHandle=e=>
   {
     { setIsSubmit(false);
       if (e.target.value<0){    e.preventDefault();    }   
@@ -47,9 +46,8 @@ const typeHandle=e=>{{ setIsSubmit(false);
      {     setDet({...det,[e.target.name]:value});     }
            
             }     
-  }
-
-  }  
+    }
+ }  
   
 const nameHandle=e=>
 {{ setIsSubmit(false);
@@ -64,7 +62,7 @@ const nameHandle=e=>
 }}  
 
 
-//ivi dropdown of countries kosam
+//list of countries
 const [value, setValue] = useState('')
     const options = useMemo(() => countryList().getData(), [])
  
@@ -80,17 +78,19 @@ const classHandler=e=>
 
   const [isSubmit,setIsSubmit]=useState(false); //to use at save button
 const [er,setEr]=useState({}) //errors lists 
-let erCount=0 //tappaledhu, useStates are slow, useEffect badhulu idhi easy 
-  const  submitHandler =e=>
+let erCount=0 //count of errors 
+  
+const  submitHandler =e=>
   { e.preventDefault();
     setEr(validator()); 
     console.log(erCount+"  error count :  ")
   }
+
 function validator()
 {
   const erro={}; erCount=0;
  let len=sl.length-1;
- if(/\S+@\S+\.\S+/.test(det.email)){
+ if(/\S+@\S+\.\S+/.test(det.email)){ //email format
 while(len>=0)
 { 
   if( !ed && sl[len].email===det.email){ erro.email='Email is not unique'; erCount=erCount+1; break;}
@@ -118,20 +118,17 @@ if(det.fn.trim().length<4){if(det.fn.trim()==''){ erro.fn='First Name is require
 
         return (
 
-
           <div style={{fontStyle:'italic',  backgroundImage: "url(" + " https://1.bp.blogspot.com/-_B1NQqcUjG4/X58l93-TU-I/AAAAAAAAIAc/D464CPe7jjEm0XrZ7HNSNE8CsUPE2GBfQCLcBGAsYHQ/s960/background-ppt-white-shades.jpg  " + ")",
           backgroundPosition: 'center',
           backgroundSize: 'cover', minHeight:'100vh',
           backgroundRepeat: 'no-repeat'}}>
 
- {/* <div style={{backgroundColor: 'ivory',  }}> */}
           <a  style={{ paddingTop:'70px', paddingLeft:'140px' }} >
 
-<div style={{paddingLeft:'1050px', fontSize:'20px'}}><a href='/log' >Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/'>Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div style={{paddingLeft:'1050px', fontSize:'20px'}}><a href='/log' >Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/'>Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
       <div style={{paddingLeft:'200px'}} >
             <h1 style={{padding:'10px', paddingLeft:'120px'}} >  The Registration Page </h1>
           <br/><br/>
-      
       
       <form onSubmit={submitHandler}>
               <TextField label="First Name *" variant="filled"  onChange={nameHandle} name='fn' value={det.fn}  color="success" style={{width:'320px'}}  focused /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -164,15 +161,10 @@ if(det.fn.trim().length<4){if(det.fn.trim()==''){ erro.fn='First Name is require
       <br/>  <button class="btn btn-info" type='submit'  style={{marginLeft:'250px', width:'180px'}} >Validate</button>
       <h6 className='Err' style={{paddingLeft:'222px', marginTop:'20px', fontSize:'20px' }} >{er.cp}</h6>
       </form>
-      
-      
-          {/* <br/><ToggleButton name="ra" value={!r} activeLabel='male' inactiveLabel='female' onToggle={()=>{setR(!r); if(r){setDet({...det,gen:'female'})} else{setDet({...det,gen:'male'})} }}/> <br/>
-          <br/> */}
-         {/* <ToggleButton value={det.s || false} onToggle={(det.s)=> {setDet([...det.fn,...det.ln,...det.c,...det.dob, s:!s])} } /> */}
-      
+
       <br/>
-      </div>   
-      </a>
+    </div>   
+    </a>
 <div style={{ paddingLeft:'1000px'}} >
 <button type="button" onClick={(e)=> { 
   { 

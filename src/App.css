@@ -10,7 +10,7 @@ line-height: 20px; size: 12px; font-weight: 200;
 
 
 
-.GeeksForGeeks1 {
+.GFG1 {
   background-image:
   url(
   "https://i.pinimg.com/originals/06/23/84/06238488191902ff79e5460285082c68.gif");
@@ -18,18 +18,3 @@ line-height: 20px; size: 12px; font-weight: 200;
  padding-inline-end: 20px; height: 340px; width: 75%; background-size: cover;
   }
 
-  /* .Bg{
-    background-image: 
-    url("");
- font-size:medium;background-repeat:no-repeat;  height: 100vh; width: 100%; background-size: cover;
-   
-  } */
-
-  /* .GeeksForGeeks {
-    background-image:
-    url(
-    "https://cricketaddictor.com/wp-content/uploads/2021/11/Kyle-Jamieson-Ajinkya-Rahane-1024x536.png");
-   font-size:medium;background-repeat:no-repeat; margin-top: 75px; margin-left: 50px;  
-   padding: 10px; height: 270px;
-    }
-     */

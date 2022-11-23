@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 
-
 const Log = () => { const history=useHistory();
     const [email,setEmail]=useState('');  const [pass,setPass]=useState(''); 
     let sendId='' ;   const [err,setErr]=useState('');
@@ -19,7 +18,7 @@ useEffect(()=>{fetch("http://localhost:8002/blogs").then(res=>res.json()).then(r
           { sendId=f.id; setLog1(true)
                 history.push({
                    pathname: '/login',
-                   state: {sendId}, //id matrame sending; next page lo id tho details fetch chestam
+                   state: {sendId}, //sharing the id of student to Login.js
                              });
             window.location.reload(false);
           }  
@@ -35,8 +34,7 @@ useEffect(()=>{fetch("http://localhost:8002/blogs").then(res=>res.json()).then(r
           backgroundPosition: 'center',
           backgroundSize: 'cover', height:'100vh',
           backgroundRepeat: 'no-repeat'}}>
-  {/* <div style={{backgroundColor:'#ffe6cc',minHeight:'100vh' ,padding:'20px', paddingBottom:'5px'}}> */}
-
+ 
      <div style={{paddingLeft:'1020px', fontSize:'20px'}}><br/>
 <button  style={{fontSize:'22px', color:'yellow'}} type="button" class="btn btn-link"  onClick={(e)=>
   {
@@ -71,7 +69,6 @@ onClick={(e)=>
 <br/><br/>  <button onClick={cli} style={{width:'150px', height:'40px', backgroundColor:'#3069a1'}}  type="button" class="btn btn-dark" >Login</button> 
 </center>
 </div>
-    // </div>
   )
 }
 

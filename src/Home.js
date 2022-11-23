@@ -8,12 +8,11 @@ const Home = () => {
   const location = useLocation(); const history=useHistory();
   return (
     <div  style={{backgroundColor:'lavender',height: '100vh', minHeight : '100vh'}}><center><br/><br/> 
-   <div className='GeeksForGeeks1' style={{fontStyle:'italic', textAlign:'center', }}>
+   <div className='GFG1' style={{fontStyle:'italic', textAlign:'center', }}>
      <h1 style={{ color:'green', position:'absolute', right:'510px'}}>Welcome Back</h1> <br/>
     <br/><br/>  
 <h6 style={{color:'darkslateblue', paddingLeft:'45px'}}> we have 3 other screens..... Registration, Login and Details screens </h6>
     </div>  <br/>
-    {/* <center>  <div style={{ margin:'10px', backgroundColor:'black', maxWidth:'500px'}}> <center><a style={{ color:'Blue', background:'pink',padding:'10px',fontSize:'20px',width:'5px'}} href={'/reg'}>You can Register here</a></center></div></center> */}
     <button  type="button" class="btn btn-success"  
 onClick={   (e)=>
   {
