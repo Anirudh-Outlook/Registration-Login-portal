@@ -142,7 +142,7 @@ if(det.fn.trim().length<4){if(det.fn.trim()==''){ erro.fn='First Name is require
               <TextField  InputProps={{inputProps: { min: "1900-01-01", max: "2012-12-31"} }} type='date' selected={det.dob} label="Date of Birth *" variant="filled" onChange={typeHandle} name='dob' value={det.dob} focused color='warning'  style={{width:'320px'}} >   Age:  </TextField>   <br/>
           <h6 className='Err' style={{ marginTop:'1px', fontSize:'12px' }} >{er.dob}</h6>  <br/>    
               <div style={{ width:'320px', borderTopWidth:'0px',borderLeftWidth:'0px',borderRightWidth:'0px', "borderBottomWidth":"2px",  'borderColor':'paleVioletRed', 'borderStyle':'ridge', minHeight:'56px', padding:'10px',backgroundColor:'#e5e8e9' }} onChange={(e)=>det.gen=e.target.value}> 
-          <h6 style={{color:'DarkSlateBlue', }} > Gender :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h6 style={{color:'DarkSlateBlue', }} > Gender * :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                <TextField type='radio' name='gen' value='male' color='primary'/> Male  &nbsp;&nbsp;&nbsp;
                <TextField type='radio' name='gen' value='female' color='secondary' /> Female
                   </h6></div>

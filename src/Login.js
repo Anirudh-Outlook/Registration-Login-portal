@@ -54,7 +54,7 @@ useEffect(()=>{fetch(`http://localhost:8002/blogs/${str}`).then(res=>res.json())
     <h6 style={{paddingLeft:'30px'}} >Congrats, You have logged in successfully!</h6>
   </div>
 <br/><br/>
-<h6 style={{ paddingBottom:'15px' , paddingLeft:'120px', color:'#ff66cc' }} > Have a look at your Details {(p.gen=='male')?'gentleman':'madam'} :  </h6>
+<h6 style={{ paddingBottom:'15px' , paddingLeft:'120px', color:'#ff66cc' }} > Have a look at your details :  </h6>
  <div style={{paddingLeft:'160px', width:'70%'}} >
   
 <table style={{ padding:'50px', tabSize:'500px' ,backgroundColor:'#e6ffff', width:'600px', maxHeight:'20px', borderColor:'black' ,borderBlockColor:'black'}} class="table table-striped"  striped variant='dark'  border='1'>
