@@ -1,3 +1,23 @@
+
+Please read the below for any kind of help
+
+
+
+
+Type the below in a terminal to start our React Project :
+npm start
+
+
+Type the below in another NEW terminal to start our json file (on 8002) :
+(npm install -g json-server)
+json-server db.json --watch --port 8002
+
+
+if any process is already using those ports, you can kill the process with below command on terminal or cmd
+npx kill-port 3000
+npx kill-port 8002
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
